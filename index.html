@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio - Desenvolvedor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link rel="stylesheet" href="style/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img id="logo-img" src="image/dark.png" alt="Logo" />
+      </div>
+      <div class="menu-lado-direito">
+        <nav>
+          <ul>
+            <li>
+              <button class="nav-btn active" onclick="irParaTexto(0)">
+                Sobre Mim
+              </button>
+            </li>
+            <li>
+              <button class="nav-btn" onclick="irParaTexto(1)">
+                Tecnologias
+              </button>
+            </li>
+            <li>
+              <button class="nav-btn" onclick="irParaTexto(2)">Projetos</button>
+            </li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" onclick="toggleTema()">
+          <i id="theme-icon" class="fas fa-sun"></i>
+          <span id="theme-text">Modo Claro</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="container-geral">
+      <div class="coluna-esquerda">
+        <div class="perfil-container">
+          <img
+            src="image/eu.png"
+            alt="Ilustração Programando"
+            class="avatar"
+          />
+        </div>
+        <div class="redes-sociais">
+          <a
+            href="https://github.com/CassioSilva007"
+            target="_blank"
+            title="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/cassio-silva-846a8337b"
+            target="_blank"
+            title="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="curriculo.pdf" target="_blank" title="Currículo"
+            ><i class="fa-solid fa-book"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="coluna-direita">
+        <section class="textos">
+          <div class="card-secao" id="secao-0">
+            <h1>Sobre <span>mim</span></h1>
+            <p class="descricao">
+              Com uma paixão por transformar ideias em soluções digital, eu me
+              dedico a criar experiências de usuário inovadoras e eficientes.
+              Utilizo as linguagens essenciais do desenvolvimento web —
+              <strong>HTML, CSS e JavaScript</strong> — como minhas principais
+              ferramentas para construir interfaces dinâmicas e funcionais.
+              Minha abordagem vai além do código. Eu acredito que a chave para
+              um bom projeto é a resolução criativa de problemas, combinando
+              estética e funcionalidade para entregar produtos que realmente
+              fazem a diferença.
+            </p>
+          </div>
+
+          <div class="card-secao" id="secao-1">
+            <h1>Tecnologias de <span>criação</span></h1>
+            <div class="grid-tecnologias">
+              <div class="tech-item">
+                <i class="devicon-html5-plain"></i> HTML
+              </div>
+              <div class="tech-item">
+                <i class="devicon-css3-plain"></i> CSS
+              </div>
+              <div class="tech-item">
+                <i class="devicon-javascript-plain"></i> JAVASCRIPT
+              </div>
+              <div class="tech-item">
+                <i class="devicon-python-plain"></i> PYTHON
+              </div>
+              <div class="tech-item">
+                <i class="devicon-mysql-plain"></i> MYSQL
+              </div>
+              <div class="tech-item">
+                <i class="devicon-cplusplus-plain"></i> C++
+              </div>
+              <div class="tech-item">
+                <i class="devicon-figma-plain"></i> FIGMA
+              </div>
+              <div class="tech-item">
+                <i class="devicon-canva-plain"></i> CANVA
+              </div>
+              <div class="tech-item"><i class="devicon-git-plain"></i> GIT</div>
+            </div>
+          </div>
+
+          <div class="card-secao" id="secao-2">
+            <h1>Projetos <span>feitos</span></h1>
+            <div class="lista-projetos">
+              <div class="projeto-item">
+                <div class="projeto-info">
+                  <h3>Calculadora Relacional</h3>
+                  <p>Projeto Pessoal</p>
+                </div>
+                <button
+                  class="btn-projeto"
+                  onclick="
+                    abrirModal(
+                      'Calculadora Relacional',
+                      'image/calculadora.png',
+                      'Uma ferramenta interativa construída para realizar operações complexas baseadas em álgebra relacional, auxiliando estudantes de banco de dados a validar suas consultas e comandos estruturados.',
+                      'https://cassiosilva007.github.io/Crud',
+                      'https://cassiosilva007.github.io/Calculadora-relacional',
+                    )
+                  "
+                >
+                  Saiba mais
+                </button>
+              </div>
+              <div class="projeto-item">
+                <div class="projeto-info">
+                  <h3>Relógio Digital</h3>
+                  <p>Projeto Pessoal</p>
+                </div>
+                <button
+                  class="btn-projeto"
+                  onclick="
+                    abrirModal(
+                      'Relógio Digital',
+                      'image/relogio.png',
+                      'Aplicação de alta precisão com suporte a múltiplos fusos horários, cronômetro integrado, interface minimalista adaptável e modo de exibição noturna inteligente.',
+                      'https://github.com/CassioSilva007/Relogio-digital',
+                      'https://cassiosilva007.github.io/Relogio-digital',
+                    )
+                  "
+                >
+                  Saiba mais
+                </button>
+              </div>
+              <div class="projeto-item">
+                <div class="projeto-info">
+                  <h3>Crud</h3>
+                  <p>Projeto Pessoal</p>
+                </div>
+                <button
+                  class="btn-projeto"
+                  onclick="
+                    abrirModal(
+                      'Sistema CRUD',
+                      'image/crud.png',
+                      'Sistema completo de gerenciamento de dados estruturado com validações de segurança, listagem em tempo real e persistência robusta de informações do usuário.',
+                      'https://github.com/CassioSilva007/Crud',
+                      'https://cassiosilva007.github.io/Crud',
+                    )
+                  "
+                >
+                  Saiba mais
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div
+      class="modal-overlay"
+      id="projeto-modal"
+      onclick="fecharModalExterno(event)"
+    >
+      <div class="modal-content">
+        <button class="modal-close" onclick="fecharModal()">
+          <i class="fas fa-times"></i>
+        </button>
+        <h2 class="modal-title" id="modal-titulo">Título do Projeto</h2>
+        <img
+          src=""
+          alt="Preview do Projeto"
+          class="modal-img"
+          id="modal-imagem"
+        />
+        <p class="modal-description" id="modal-descricao">
+          Descrição detalhada sobre o projeto.
+        </p>
+        <div class="modal-buttons">
+          <a
+            href="#"
+            target="_blank"
+            class="modal-btn modal-btn-code"
+            id="modal-link-github"
+          >
+            <i class="fab fa-github"></i> Ver Código
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            class="modal-btn modal-btn-live"
+            id="modal-link-site"
+          >
+            <i class="fas fa-external-link-alt"></i> Acessar Site
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollToPlugin.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
